@@ -1,8 +1,10 @@
-  $("#dialog > pre").html(` Objective
-Provide a web-based tool for MCPS schools to calculate their current carbon footprint based on individual school inputs. This will allow the school administrators to create a baseline and track progress to mitigate their carbon footprint. 
+  $("#dialog > pre").html(`Objective:
+Provide a web-based tool for MCPS schools to calculate their current carbon footprint based on individual school inputs. 
+This will allow the school administrators to create a baseline and track progress to mitigate their carbon footprint. 
 
 What does this site do?
-This website is a Carbon Footprint Calculator for MCPS modeled along the lines of the EPA Carbon footprint calculator. This calculator estimates the carbon footprint attributable to each school’s activities such as transportation services, 
+This website is a Carbon Footprint Calculator for MCPS modeled along the lines of the EPA Carbon footprint calculator.
+This calculator estimates the carbon footprint attributable to each school’s activities such as transportation services, 
 energy consumption, and net waste generated. 
 
 Inputs Required
@@ -20,13 +22,11 @@ Cardon emission = Annual  fuel consumption x emission rate
 Carbon footprint from  Waste:  
 1) Annual waste generated for these categories - Recycle, Landfill, Combust, Compost, and Anaerobically Digested     
 
-
 How can the schools reduce its carbon footprint?
 1) Convert school buses to electric. 
 2) Install roof-top solar panels.
 3) Replace incandescent lightbulbs with LED or other ENERGY STAR  lights.
 4) Turn up/down the AC and heating thermostat in the summer and winter months.
-
 
 Resources
 MCPS
