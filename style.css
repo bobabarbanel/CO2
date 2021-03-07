@@ -285,9 +285,9 @@ input:disabled {
 } */
 #dialog {
     position: absolute;
-    left: 2%;
-    top: 2%;
-    width: 95%;
+    left: 5%;
+    top: 5%;
+    width: 90%;
     height: 95%;
     background: lightgrey;
     display: none;
