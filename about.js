@@ -37,7 +37,7 @@ EPA
 <u>https://fueleconomy.gov/</u>
 
 About the Creator
-This website was developed by  Rishi S. Iyer, a student at Thomas S. Wootton High School (class of 2024) in the Montgomery County Public School(MCPS), Maryland.`);
+This website was developed by Rishi S. Iyer, a student at Thomas S. Wootton High School('24) in the Montgomery County Public School(MCPS), Maryland.`);
   
 $(".about").on("click", ()=>{
     $( "#dialog" ).show();
