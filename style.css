@@ -285,13 +285,17 @@ input:disabled {
 } */
 #dialog {
     position: absolute;
-    left: 60px;
-    top: 20px;
-    width: 90%;
-    height: 90%;
+    left: 2%;
+    top: 2%;
+    width: 95%;
+    height: 95%;
     background: lightgrey;
     display: none;
     font-style: bold;
+	
+}
+#dialog pre {
+margin-left: 15px;	
 }
 .aboutX {
     float: right;
