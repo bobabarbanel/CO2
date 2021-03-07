@@ -1,0 +1,321 @@
+body {
+  background: rgb(95, 146, 223);
+  margin: 10px;
+}
+container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+container h1 {
+  text-align: center;
+}
+container label {
+  padding: 10px;
+}
+container input {
+  margin-right: 5px;
+}
+/*new*/
+#selector h2 {
+  text-align: center;
+}
+form {
+  display: flex;
+  justify-content: center;
+}
+/*new*/
+.schooltype label {
+  font-size: 20px;
+  padding: 10px;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 30px;
+  width: 90%;
+  text-align: center;
+}
+nav a {
+  width: 200px;
+  padding: 20px;
+  border: 2px solid black;
+  font-style: bold;
+  text-decoration: none;
+  color: white;
+  border-radius: 20px;
+  text-align: center;
+}
+nav button {
+    height: 30px;
+}
+.transport {
+  background: green;
+}
+.energy {
+  background: green;
+}
+.waste {
+  background: green;
+}
+.far,
+.fas {
+  color: yellow;
+}
+#submits {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+.submitbutton {
+  margin-top: 40px;
+  background: green;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+  width: 240px;
+  height: 80px;
+  margin: 40px 40px auto;
+  text-align: center;
+}
+/*new*/
+.submitbutton:hover {
+    color: black;
+    background: lightgreen;
+    font-weight: bold;
+  }
+  .submitbutton:hover .icon {
+    color: black;
+  }
+  /*new*/
+#schoolinfo {
+  font-weight: bold;
+  color: black;
+  font-size: 30px;
+  padding: 25px;
+  text-align: center;
+  background: tan;
+  margin: 20px;
+}
+#dataentry {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+summary {
+  background: white;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  margin-left: 50px;
+  width: 270px;
+  max-height: 200px;
+  position: relative;
+  /* margin-top: 40px; */
+}
+summary > span {
+  margin: 0 auto;
+}
+summary > button {
+    margin: 0 auto;
+    width: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-15px);
+}
+#tdata input {
+  width: 100px;
+  margin-left: 20px;
+}
+.rowLabel {
+  text-align: right;
+  padding-right: 20px;
+  border: 2px solid black;
+  background: wheat;
+  width: 180px !important;
+  border: none;
+}
+#tdata .rowLabel, #wdata .rowLabel {
+    width: 180px !important;
+}
+#edata .rowLabel {
+    width: 110px !important;
+}
+.calc {
+  border: 2px solid black;
+  color: white;
+  background: rgba(169, 169, 169, 0.301);
+  font-weight: bold;
+}
+.calc > span {
+  margin-left: 25px;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.left,.right {
+    max-width: 40%;
+}
+.left h2, .right h2 {
+    text-align: center;
+}
+.left {
+    margin-left: 50px;
+}
+.right {
+    margin-right: 50px;
+}
+footer div {
+  font-size: 17px;
+}
+#selector h2 {
+  text-align: center;
+}
+.radioVert {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+#edata thead th,
+#tdata thead th,
+#wdata thead th {
+  font-size: 24px;
+  min-width: 150px;
+}
+#edata tbody label {
+  font-size: 18px;
+}
+.bills input {
+  width: 175px;
+}
+/* #edata .calc{
+    width: 180px !important; 
+}  */
+.annual {
+  background: lightgreen;
+}
+.total {
+  background: lightblue;
+}
+.annual span,
+.total span {
+  margin-left: 30px;
+}
+#wdata td input {
+  min-width: 100px;
+  margin-left: 20px;
+}
+.dataLabel {
+  background: lightgrey;
+  text-align: center;
+}
+
+
+#wdata input,
+#tdata input {
+  width: 75px;
+  margin-left: 30px;
+}
+
+/* #wdata th {
+	width: 200px;
+} */
+#wdata td {
+  width: 75px;
+  padding: 4px;
+}
+.class span {
+  margin-left: 10px;
+  width: 90%;
+}
+
+
+#edata,
+#wdata {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+}
+#tdata {
+    border-collapse: separate;
+border-spacing: 0 25px;
+}
+#wdata td {
+  border: 1px solid rgb(11, 37, 53);
+}
+th {
+  text-align: center;
+}
+
+.tons {
+  font-size: 24px;
+  border: 2px solid black;
+  color: rgb(102, 26, 26);
+  background: lightgrey;
+}
+.chosen-single {
+  font-size: 20px;
+}
+.annual {
+  background: lightgreen;
+}
+.annual span,
+.total span {
+  margin-left: 30px;
+}
+.total {
+  background: lightblue;
+}
+summary h3 {
+  text-align: center;
+}
+
+input:disabled {
+  background: rgba(177, 147, 147, 0.6);
+}
+/* #wdata tbody tr {
+     height: 1em;
+} */
+#dialog {
+    position: absolute;
+    left: 60px;
+    top: 20px;
+    width: 90%;
+    height: 90%;
+    background: lightgrey;
+    display: none;
+    font-style: bold;
+}
+.aboutX {
+    float: right;
+    background: white;
+}
+#homedialog {
+    display: none;
+    width: 300px;
+    height: 130px;
+    background: white;
+    border: 2px solid black;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+#homedialog p {
+    margin-left: 30px;
+}
+#homedialogbuttons {
+    display: flex;
+    justify-content: space-around;
+
+}
+.question {
+    font-size: 30px;
+    color: red;
+}
