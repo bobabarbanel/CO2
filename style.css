@@ -129,6 +129,7 @@ summary > button {
 }
 summary.final {
   max-height: 350px;
+  margin: 0 auto;
 }
 #tdata input {
   width: 100px;
@@ -335,4 +336,8 @@ input:disabled {
 .unit {
   background: white;
   font-style: bold;
+}
+.pageHeading {
+  background: rgb(77, 182, 182);
+  text-align: center;
 }
