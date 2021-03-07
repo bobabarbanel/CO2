@@ -127,6 +127,9 @@ summary > button {
     left: 50%;
     transform: translateX(-50%) translateY(-15px);
 }
+summary.final {
+  max-height: 350px;
+}
 #tdata input {
   width: 100px;
   margin-left: 20px;
@@ -285,17 +288,13 @@ input:disabled {
 } */
 #dialog {
     position: absolute;
-    left: 5%;
-    top: 5%;
+    left: 60px;
+    top: 20px;
     width: 90%;
-    height: 95%;
+    height: 90%;
     background: lightgrey;
     display: none;
     font-style: bold;
-	
-}
-#dialog pre {
-margin-left: 15px;	
 }
 .aboutX {
     float: right;
@@ -322,4 +321,18 @@ margin-left: 15px;
 .question {
     font-size: 30px;
     color: red;
+}
+.report {
+    background: white;  
+}
+#wdata div.report {
+    width: 100px;
+    margin-left: 20px;
+}
+#wdata div.empty {
+    background: grey;
+}
+.unit {
+  background: white;
+  font-style: bold;
 }

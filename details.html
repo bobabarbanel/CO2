@@ -11,7 +11,222 @@
 <body>
     <container>
     <div id="schoolinfo">School Name</div>
-    <pre id="details"></pre>
+    <div id="details">
+<h2>Transportation</h2>
+<table id="tdata">
+    <thead>
+      <tr>
+        <th></th>
+        <td width="10px"></td>
+        <th>Gasoline</th>
+        <td width="10px"></td>
+        <th>Diesel</th>
+        <td width="10px"></td>
+        <th>Electric</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr id="buses">
+  <td class="rowLabel">Number of Buses Used</td>
+  <td width="10px"></td>
+  <td><div class="report" id="gbuses"/></td>
+  <td width="10px"></td>
+  <td><div class="report" id="dbuses"/></td>
+  <td width="10px"></td>
+  <td><div class="report" id="ebuses"/></td>
+</tr>
+<tr>
+  <td class="rowLabel">Annual Miles Driven per Bus</td>
+  <td width="10px"></td>
+  <td><div class="report" id="gmilesdriven"/></td>
+  <td width="10px"></td>
+  <td><div class="report" id="dmilesdriven"/></td>
+  <td width="10px"></td>
+  <td><div class="report" id="emilesdriven"/></td>
+</tr>
+<tr>
+  <td class="rowLabel">Total CO2 Emission for Transportation (lbs.)</td>
+  <!-- <td>(Buses * Miles Driven / 6 for Gas, 7 for Diesel * 19.36 lbs/CO2 for Gas, 22.51 lbs/CO2 for Diesel) </td> -->
+  <td width="10px"></td>
+  <td class="calc"><span id="t_gCO2"></span></td>
+  <td width="10px"></td>
+  <td class="calc"><span id="t_dCO2"></span></td>
+  <td width="10px"></td>
+  <td class="calc"><span id="t_eCO2"></span></td>
+</tr>
+</tbody>
+</table>
+<h2>Energy</h2>
+<table id="edata">
+    <thead>
+      <tr>
+        <th></th>
+        <td width="10px"></td>
+        <th>Natural Gas</th>
+        <td width="10px"></td>
+        <th>Electricity</th>
+        <td width="10px"></td>
+        <th>Fuel Oil</th>
+        <td width="10px"></td>
+        <th>Propane</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr>
+  <td class="rowLabel">Unit Type</td>
+  <td width="10px"></td>
+<td>
+<div class="unit" id="nunit"></div>
+</td>
+<td width="10px"></td>
+<td>
+<div class="unit" id="eunit"></div>
+</td>
+<td width="10px"></td>
+<td>
+<div class="unit" id="funit"></div>
+</td>
+<td width="10px"></td>
+<td>
+<div class="unit" id="punit"></div>
+</td>
+</tr>
+<tr class="bills">
+  <td class="rowLabel">Monthly Bill Data</td>
+  <td width="10px"></td>
+  <td><div class="report" id="nbill"></td>
+  <td width="10px"></td>
+  <td><div class="report" id="ebill"></td>
+  <td width="10px"></td>
+  <td><div class="report" id="fbill"></td>
+  <td width="10px"></td>
+  <td><div class="report" id="pbill"></td>
+</tr>
+<tr>
+  <td class="rowLabel">Total CO2<br/>Emission for Energy (lbs.)</td>
+  <td width="10px"></td>
+  <td class="calc"><span id="e_nCO2"></span></td>
+  <td width="10px"></td>
+  <td class="calc"><span id="e_eCO2"></span></td>
+  <td width="10px"></td>
+  <td class="calc"><span id="e_fCO2"></span></td>
+  <td width="10px"></td>
+  <td class="calc"><span id="e_pCO2"></span></td>
+</tr>
+</tbody>
+</table>
+<h2>Waste</h2>
+<table id="wdata">
+    <colgroup>
+        <col style="width: 150px;">
+        <col style="width: 150px;">
+        <col style="width: 150px;">
+        <col style="width: 150px;">
+        <col style="width: 150px;">
+        <col style="width: 150px;">
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="rowLabel dataLabel">Annual<br/>Metric Tons</th>
+        <th>Recycle</th>
+        <th>Landfill</th>
+        <th>Combust</th>
+        <th>Composted</th>                   
+        <th>Anaerobically<br/>Digested</th>
+      </tr>
+    </thead>
+    <tbody>
+<tr>
+  <th class="rowLabel" id="Paper">Paper</th>
+  <td><div id="Recycle_Paper" class="report"></div></td>
+  <td><div id="Landfill_Paper" class="report"></div></td>
+  <td><div id="Combust_Paper" class="report"></div></td>
+  <td><div id="Composted_Paper" class="report empty"></div></td>
+  <td><div id="Anaerob_Paper" class="report empty" ></div></td>
+</tr>
+<tr>
+  <th class="rowLabel" id="Food">Food Waste</th>
+  <td><div id="Recycle_Food" class="report empty"></div></td>
+  <td><div id="Landfill_Food" class="report"></div></td>
+  <td><div id="Combust_Food" class="report"></div></td>
+  <td><div id="Composted_Food" class="report"></div></td>
+  <td><div id="Anaerob_Food" class="report"></div></td>
+</tr>
+<tr>
+  <th class="rowLabel" id="Yard">Yard Trimmings</th>
+  <td><div id="Recycle_Yard" class="report empty"></div></td>
+  <td><div id="Landfill_Yard" class="report"></div></td>
+  <td><div id="Combust_Yard" class="report"></div></td>
+  <td><div id="Composted_Yard" class="report"></div></td>
+  <td><div id="Anaerob_Yard" class="report"></div></td>
+</tr>
+<tr>
+    <th class="rowLabel" id="Plastics">Mixed Plastics</th>
+  <td><div id="Recycle_Plastics" class="report"></div></td>
+  <td><div id="Landfill_Plastics" class="report"></div></td>
+  <td><div id="Combust_Plastics" class="report"></div></td>
+  <td><div id="Composted_Plastics" class="report"></div></td>
+  <td><div id="Anaerob_Plastics" class="report empty"></div></td>
+  </tr>
+  <tr>
+    <th class="rowLabel" id="Electronics">Electronics</th>
+    <td><div id="Recycle_Electronics" class="report"></div></td>
+  <td><div id="Landfill_Electronics" class="report"></div></td>
+  <td><div id="Combust_Electronics" class="report"></div></td>
+  <td><div id="Composted_Electronics" class="report empty"></div></td>
+  <td><div id="Anaerob_Electronics" class="report empty"></div></td>
+  </tr>
+  <tr>
+    <th class="rowLabel" id="Metals">Metals</th>
+    <td><div id="Recycle_Metals" class="report"></div></td>
+  <td><div id="Landfill_Metals" class="report"></div></td>
+  <td><div id="Combust_Metals" class="report"></div></td>
+  <td><div id="Composted_Metals" class="report empty"></div></td>
+  <td><div id="Anaerob_Metals" class="report empty"></div></td>
+  </tr>
+  <tr>
+    <th class="rowLabel" id="Glass">Glass</th>
+  <td><div id="Recycle_Glass" class="report"></div></td>
+  <td><div id="Landfill_Glass" class="report"></div></td>
+  <td><div id="Combust_Glass" class="report"></div></td>
+  <td><div id="Composted_Glass" class="report empty"></div></td>
+  <td><div id="Anaerob_Glass" class="report empty"></div></td>
+  </tr>
+  <tr>
+    <th class="rowLabel" id="Construction">Construction Materials</th>
+    <td><div id="Recycle_Construction" class="report"></div></td>
+  <td><div id="Landfill_Construction" class="report"></div></td>
+  <td><div id="Combust_Construction" class="report"></div></td>
+  <td><div id="Composted_Construction" class="report empty"></div></td>
+  <td><div id="Anaerob_Construction" class="report empty"></div></td>
+  </tr>
+  <tr>
+    <th class="rowLabel" id="Tires">Tires</th>
+    <td><div id="Recycle_Tires" class="report"></div></td>
+  <td><div id="Landfill_Tires" class="report"></div></td>
+  <td><div id="Combust_Tires" class="report"></div></td>
+  <td><div id="Composted_Tires" class="report empty"></div></td>
+  <td><div id="Anaerob_Tires" class="report empty"></div></td>
+  </tr>
+  <tr>
+    <th class="rowLabel" id="Mixed">Mixed Materials</th>
+    <td><div id="Recycle_Mixed" class="report"></div></td>
+  <td><div id="Landfill_Mixed" class="report"></div></td>
+  <td><div id="Combust_Mixed" class="report"></div></td>
+  <td><div id="Composted_Mixed" class="report"></div></td>
+  <td><div id="Anaerob_Mixed" class="report"></div></td>
+  </tr>
+</tbody>
+</table>
+<h2>Summary</h2>
+<summary class="final">
+    <h3>Your Carbon Footprint</h3>
+    <h4 class="annual">Transportation:<br/>Annual CO2 Emissions (lbs.)<br/><span id="t_annual"></span></h4>
+    <h4 class="annual">Energy:<br/>Annual CO2 Emissions (lbs.)<br/><span id="e_annual"></span></h4>
+    <h4 class="annual">Waste:<br/>Annual CO2 Emissions (lbs.)<br/><span id="w_annual"></span></h4>
+    <h4 class="total">Your Current Total (lbs.):<br/><span id="current"></span></h4>
+  </summary>
+    </div>
     </container>
 
     <script src="details.js"></script>

@@ -63,9 +63,9 @@ function doCO2calc(fuel, numbuses, milesdriven){
     // }
     // else{
     $("#annual").text(numberWithCommas(gCO2 + dCO2));
-    school.transport.gCO2 = gCO2;
-    school.transport.dCO2 = dCO2;
-    school.transport.eCO2 = eCO2;
+    school.transport.t_gCO2 = gCO2;
+    school.transport.t_dCO2 = dCO2;
+    school.transport.t_eCO2 = eCO2;
     school.transport.annual = gCO2 + dCO2;
     $("#current").text(numberWithCommas(school.transport.annual + school.energy.annual + school.waste.annual));
     school.initialized = false;

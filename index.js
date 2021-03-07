@@ -64,7 +64,6 @@ function ready(){
         const id = +$(this).val();
         // console.log(id);
         const school = schools.find(s => s.id === id);
-        school.numberofstudents = 0;
         // add fields for TRANSPORT
         school.transport = {annual: 0}
         for(let fuel of ["g", "d", "e"]){

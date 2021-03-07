@@ -34,7 +34,6 @@ $(function () {
 }
 
   function calculateWaste() {
-      if(compType === "metric tons"){
         waste.annual = 0;
     for(let method in wasteNums){
         for(let material in wasteNums[method]){
@@ -46,22 +45,7 @@ $(function () {
             }
         }
     }
-    }
-    else{
-        //depending on school.type, calculate waste.annual from numberofstudents
-        school.numberofstudents = +$("#studentcount").val();
-        switch(school.type){
-            case "Elementary": 
-            waste.annual = school.numberofstudents * 12;
-            break;
-            case "Middle": 
-            waste.annual = school.numberofstudents * 13;
-            break;
-            case "High": 
-            waste.annual = school.numberofstudents * 14;
-            break;
-        }
-    }
+    waste.annual *= 2204.62;
     $("#annual").text(numberWithCommas(waste.annual));
     
     $("#current").text(numberWithCommas(school.transport.annual + school.energy.annual + waste.annual));
