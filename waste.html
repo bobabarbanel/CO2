@@ -39,26 +39,26 @@
     <div id="dataentry">
       <form>
         <table id="wdata">
-          <colgroup>
-            <col style="width: 150px;">
-            <col style="width: 150px;">
-            <col style="width: 150px;">
-            <col style="width: 150px;">
-            <col style="width: 150px;">
-            <col style="width: 150px;">
-          </colgroup>
+          <!-- <colgroup>
+            <col style="width: 30px;">
+            <col style="width: 30px;">
+            <col style="width: 30px;">
+            <col style="width: 30px;">
+            <col style="width: 30px;">
+            <col style="width: 30px;">
+          </colgroup> -->
           <thead>
-            <tr>
+            <tr class="wrowLabel">
               <th class="rowLabel dataLabel">Annual<br />Metric Tons</th>
-              <th>Recycle</th>
-              <th>Landfill</th>
-              <th>Combust</th>
-              <th>Composted</th>
-              <th>Anaerobically<br />Digested</th>
+              <th class="angle">Recycle</th>
+              <th class="angle">Landfill</th>
+              <th class="angle">Combust</th>
+              <th class="angle">Composted</th>
+              <th class="angle">Anaerobically<br />Digested</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Paper">Paper</th>
               <td><input type="number" min="0" max="100" col="Recycle"></td>
               <td><input type="number" min="0" max="100" col="Landfill"></td>
@@ -66,7 +66,7 @@
               <td><input type="number" min="0" max="100" col="Composted" disabled></td>
               <td><input type="number" min="0" max="100" col="Anaerob" disabled></td>
             </tr>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Food">Food Waste</th>
               <td><input type="number" min="0" max="10000" col="Recycle" disabled></td>
               <td><input type="number" min="0" max="10000" col="Landfill"></td>
@@ -74,7 +74,7 @@
               <td><input type="number" min="0" max="10000" col="Composted"></td>
               <td><input type="number" min="0" max="10000" col="Anaerob"></td>
             </tr>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Yard">Yard Trimmings</th>
               <td><input type="number" min="0" max="10000" col="Recycle" disabled></td>
               <td><input type="number" min="0" max="10000" col="Landfill"></td>
@@ -82,7 +82,7 @@
               <td><input type="number" min="0" max="10000" col="Composted"></td>
               <td><input type="number" min="0" max="10000" col="Anaerob"></td>
             </tr>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Plastics">Mixed Plastics</th>
               <td><input type="number" min="0" max="10000" col="Recycle"></td>
               <td><input type="number" min="0" max="10000" col="Landfill"></td>
@@ -90,7 +90,7 @@
               <td><input type="number" min="0" max="10000" col="Composted"></td>
               <td><input type="number" min="0" max="10000" col="Anaerob" disabled></td>
             </tr>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Electronics">Electronics</th>
               <td><input type="number" min="0" max="10000" col="Recycle"></td>
               <td><input type="number" min="0" max="10000" col="Landfill"></td>
@@ -98,7 +98,7 @@
               <td><input type="number" min="0" max="10000" col="Composted" disabled></td>
               <td><input type="number" min="0" max="10000" col="Anaerob" disabled></td>
             </tr>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Metals">Metals</th>
               <td><input type="number" min="0" max="10000" col="Recycle"></td>
               <td><input type="number" min="0" max="10000" col="Landfill"></td>
@@ -106,7 +106,7 @@
               <td><input type="number" min="0" max="10000" col="Composted" disabled></td>
               <td><input type="number" min="0" max="10000" col="Anaerob" disabled></td>
             </tr>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Glass">Glass</th>
               <td><input type="number" min="0" max="10000" col="Recycle"></td>
               <td><input type="number" min="0" max="10000" col="Landfill"></td>
@@ -114,7 +114,7 @@
               <td><input type="number" min="0" max="10000" col="Composted" disabled></td>
               <td><input type="number" min="0" max="10000" col="Anaerob" disabled></td>
             </tr>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Construction">Construction Materials</th>
               <td><input type="number" min="0" max="10000" col="Recycle"></td>
               <td><input type="number" min="0" max="10000" col="Landfill"></td>
@@ -122,7 +122,7 @@
               <td><input type="number" min="0" max="10000" col="Composted" disabled></td>
               <td><input type="number" min="0" max="10000" col="Anaerob" disabled></td>
             </tr>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Tires">Tires</th>
               <td><input type="number" min="0" max="10000" col="Recycle"></td>
               <td><input type="number" min="0" max="10000" col="Landfill"></td>
@@ -130,7 +130,7 @@
               <td><input type="number" min="0" max="10000" col="Composted" disabled></td>
               <td><input type="number" min="0" max="10000" col="Anaerob" disabled></td>
             </tr>
-            <tr>
+            <tr class="winputs">
               <th class="rowLabel" id="Mixed">Mixed Materials</th>
               <td><input type="number" min="0" max="10000" col="Recycle"></td>
               <td><input type="number" min="0" max="10000" col="Landfill"></td>
@@ -142,6 +142,7 @@
         </table>
       </form>
       <div id="summary"></div>
+    </div>
   </container>
   <script src="wastenums.js"></script>
   <script src="waste.js"></script>
