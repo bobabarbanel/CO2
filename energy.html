@@ -1,102 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energy</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
-<style>
-    .energy{
-        font-weight: bold;
-        border: dotted;
-        background-color: blue;
-    }
-</style>
-<script src="https://kit.fontawesome.com/1824f337f5.js" crossorigin="anonymous"></script>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energy</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .energy {
+      font-weight: bold;
+      border: dotted;
+      background-color: blue;
+    }
+  </style>
+  <script src="https://kit.fontawesome.com/1824f337f5.js" crossorigin="anonymous"></script>
+  <script>
+    $(function () {
+      $("#summary").load("summary.html");
+    });
+  </script>
 </head>
+
 <body>
-    <container>
-        <nav>
-            <button class="home">Home</button>
-            <a class="transport" href="transport.html">
-              <span><i class="fas fa-bus"></i><br />Transportation</span>
-            </a>
-            <a class="energy" href="energy.html"
-              ><span><i class="far fa-lightbulb"></i><br />Energy</span></a
-            >
-      
-            <a class="waste" href="waste.html"
-              ><span><i class="fas fa-dumpster"></i><br />Waste</span></a
-            >
-            <button class="about">About</button>
-          </nav>
+  <container>
+    <nav>
+      <button class="home">Home</button>
+      <a class="transport" href="transport.html">
+        <span><i class="fas fa-bus"></i><br />Transportation</span>
+      </a>
+      <a class="energy" href="energy.html"><span><i class="far fa-lightbulb"></i><br />Energy</span></a>
+
+      <a class="waste" href="waste.html"><span><i class="fas fa-dumpster"></i><br />Waste</span></a>
+      <button class="about">About</button>
+    </nav>
     <div id="schoolinfo">School Name</div>
 
-    
+
     <div id="dataentry">
-      
-            <table id="edata">
-              <thead>
-                <tr>
-                  <th></th>
-                  <td width="10px"></td>
-                  <th>Natural Gas</th>
-                  <td width="10px"></td>
-                  <th>Electricity</th>
-                  <td width="10px"></td>
-                  <th>Fuel Oil</th>
-                  <td width="10px"></td>
-                  <th>Propane</th>
-                </tr>
-              </thead>
-              <tbody>
+
+      <table id="edata">
+        <thead>
+          <tr>
+            <th></th>
+            <td width="10px"></td>
+            <th>Natural Gas</th>
+            <td width="10px"></td>
+            <th>Electricity</th>
+            <td width="10px"></td>
+            <th>Fuel Oil</th>
+            <td width="10px"></td>
+            <th>Propane</th>
+          </tr>
+        </thead>
+        <tbody>
           <tr>
             <td class="rowLabel">Select Unit Type</td>
             <td width="10px"></td>
-<td>
-    <form id="nunit" class="radioVert">
-        <label for="n_therms"><input  class="forcalc" type="radio" id="n_therms" name="nunit" value="n_therms">Therms</label> 
-        <label for="n_tcf"><input  class="forcalc" type="radio" id="n_tcf" name="nunit" value="n_tcf">Thousand<br/>&nbsp;&nbsp;&nbsp;&nbsp;Cubic Feet </label> 
-        <label for="n_dollars"><input  class="forcalc" type="radio" id="n_dollars" name="nunit" value="n_dollars">Dollars</label>
-    </form>
-    </td>
-    <td width="10px"></td>
-<td>
-    <form id="eunit" class="radioVert">
-    <label for="e_kwh"><input  class="forcalc" type="radio" id="e_kwh" name="eunit" value="e_kwh">Kilowatt Hours</label> 
-    <label for="e_dollars"><input  class="forcalc" type="radio" id="e_dollars" name="eunit" value="e_dollars">Dollars</label> 
-</form>
-</td>
-<td width="10px"></td>
-<td>
-<form id="funit" class="radioVert"> 
-    <label for="f_gallons"><input  class="forcalc" type="radio" id="f_gallons" name="funit" value="f_gallons">Gallons</label> 
-    <label for="f_dollars"><input  class="forcalc" type="radio" id="f_dollars" name="funit" value="f_dollars">Dollars</label> 
-</form>
-</td>
-<td width="10px"></td>
-<td>
-<form id="punit" class="radioVert"> 
-    <label for="p_gallons"><input  class="forcalc" type="radio" id="p_gallons" name="punit" value="p_gallons">Gallons</label> 
-    <label for="p_dollars"><input  class="forcalc" type="radio" id="p_dollars" name="punit" value="p_dollars">Dollars</label> 
-</form>
-</td>
-</tr>
+            <td>
+              <form id="nunit" class="radioVert">
+                <label for="n_therms"><input class="forcalc" type="radio" id="n_therms" name="nunit"
+                    value="n_therms">Therms</label>
+                <label for="n_tcf"><input class="forcalc" type="radio" id="n_tcf" name="nunit"
+                    value="n_tcf">Thousand<br />&nbsp;&nbsp;&nbsp;&nbsp;Cubic Feet </label>
+                <label for="n_dollars"><input class="forcalc" type="radio" id="n_dollars" name="nunit"
+                    value="n_dollars">Dollars</label>
+              </form>
+            </td>
+            <td width="10px"></td>
+            <td>
+              <form id="eunit" class="radioVert">
+                <label for="e_kwh"><input class="forcalc" type="radio" id="e_kwh" name="eunit" value="e_kwh">Kilowatt
+                  Hours</label>
+                <label for="e_dollars"><input class="forcalc" type="radio" id="e_dollars" name="eunit"
+                    value="e_dollars">Dollars</label>
+              </form>
+            </td>
+            <td width="10px"></td>
+            <td>
+              <form id="funit" class="radioVert">
+                <label for="f_gallons"><input class="forcalc" type="radio" id="f_gallons" name="funit"
+                    value="f_gallons">Gallons</label>
+                <label for="f_dollars"><input class="forcalc" type="radio" id="f_dollars" name="funit"
+                    value="f_dollars">Dollars</label>
+              </form>
+            </td>
+            <td width="10px"></td>
+            <td>
+              <form id="punit" class="radioVert">
+                <label for="p_gallons"><input class="forcalc" type="radio" id="p_gallons" name="punit"
+                    value="p_gallons">Gallons</label>
+                <label for="p_dollars"><input class="forcalc" type="radio" id="p_dollars" name="punit"
+                    value="p_dollars">Dollars</label>
+              </form>
+            </td>
+          </tr>
           <tr class="bills">
             <td class="rowLabel">Monthly Bill Data</td>
             <td width="10px"></td>
-            <td><input  class="forcalc" type="number" min="0" max="10000" id="nbill" placeholder="Monthly Bill Data"></td>
+            <td><input class="forcalc" type="number" min="0" max="10000" id="nbill" placeholder="Monthly Bill Data">
+            </td>
             <td width="10px"></td>
-            <td><input  class="forcalc" type="number" min="0" max="10000" id="ebill" placeholder="Monthly Bill Data"></td>
+            <td><input class="forcalc" type="number" min="0" max="10000" id="ebill" placeholder="Monthly Bill Data">
+            </td>
             <td width="10px"></td>
-            <td><input  class="forcalc" type="number" min="0" max="10000" id="fbill" placeholder="Monthly Bill Data"></td>
+            <td><input class="forcalc" type="number" min="0" max="10000" id="fbill" placeholder="Monthly Bill Data">
+            </td>
             <td width="10px"></td>
-            <td><input  class="forcalc" type="number" min="0" max="10000" id="pbill" placeholder="Monthly Bill Data"></td>
+            <td><input class="forcalc" type="number" min="0" max="10000" id="pbill" placeholder="Monthly Bill Data">
+            </td>
           </tr>
           <tr>
-            <td class="rowLabel">Total CO2<br/>Emission for Energy (lbs.)</td>
+            <td class="rowLabel">Total CO2<br />Emission for Energy (lbs.)</td>
             <td width="10px"></td>
             <td class="calc"><span id="e_nCO2calc"></span></td>
             <td width="10px"></td>
@@ -107,29 +123,12 @@
             <td class="calc"><span id="e_pCO2calc"></span></td>
           </tr>
         </tbody>
-        </table>
-        <summary>
-            <h3>Your Carbon Footprint</h3>
-            <h4 class="annual">Annual CO2 Emissions (lbs.):<br/><span id="annual"></span></h4>
-            <h4 class="total">Your Current Total (lbs.):<br/><span id="current"></span></h4>
-            <button class="report">Display All Data</button>
-        </summary>
-        <div id="dialog">
-            <button class="aboutX">X</button>
-            <pre></pre>
-          </div>
-          <div id="homedialog">
-            <p>Are you sure you want to start over?</p>
-            <p>All of your data will be lost.</p>
-            <div id="homedialogbuttons">
-            <button id="startover">Start Over</button>
-            <i class="fas fa-question-circle question"></i>
-            <button id="cancel">Cancel</button>
-            </div>
-          </div>
+      </table>
+      <div id="summary"></div>
     </div>
-</container>
-<script src="energy.js"></script>   
-<script src="about.js"></script>     
+  </container>
+  <script src="energy.js"></script>
+  <script src="about.js"></script>
 </body>
+
 </html>
