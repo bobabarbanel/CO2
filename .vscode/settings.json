@@ -1,6 +1,10 @@
 {
     "cSpell.ignoreWords": [
         "dataentry",
+        "eunit",
+        "funit",
+        "nunit",
+        "punit",
         "submitbutton"
     ]
 }

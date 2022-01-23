@@ -5,8 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MCPS Carbon Footprint Calculator</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="assets/styles/index.css" />
+
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/1824f337f5.js" crossorigin="anonymous"></script>
+  <!-- <link href="assets/fontawesome-free-5.15.4-web/js/solid.css" rel="stylesheet">
+  <link href="assets/fontawesome-free-5.15.4-web/css/fontawesome.css" rel="stylesheet"> -->
+  <!-- <link href="/your-path-to-fontawesome/css/brands.css" rel="stylesheet"> -->
+  <!-- <link href="/your-path-to-fontawesome/css/solid.css" rel="stylesheet"> -->
+
+  <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"
@@ -15,7 +23,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css"
     integrity="sha512-0nkKORjFgcyxv3HbE4rzFUlENUMNqic/EzDIeYCgsKa/nwqr2B91Vu/tNAu4Q0cBuG4Xe/D1f/freEci/7GDRA=="
     crossorigin="anonymous" />
-  <script src="csvdata.js"></script>
+
+  <!-- Schools Info -->
+  <script src="schools_csvdata.js"></script>
 </head>
 
 <body>
@@ -28,10 +38,12 @@
       <label for="high"><input type="radio" id="high" name="school-type" value="High" />High</label>
       <label for="all"><input type="radio" id="all" name="school-type" value="All" />All</label>
     </form>
+
     <div id="selector">
       <h2>Sample</h2>
       <select class="chosen" style="width: 450px"></select>
     </div>
+    
     <div id="submits">
       <button class="submitbutton" target="transport">
         <i class="icon fas fa-bus"></i><br />Transportation
@@ -43,6 +55,7 @@
         <i class="icon fas fa-dumpster"></i><br />Waste
       </button>
     </div>
+
   </container>
   <footer>
     <div class="left">

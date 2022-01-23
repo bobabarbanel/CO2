@@ -1,0 +1,102 @@
+body {
+	background: rgb(95, 146, 223);
+	margin: 10px;
+}
+container {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+container h1 {
+	text-align: center;
+}
+container label {
+	padding: 10px;
+}
+container input {
+	margin-right: 5px;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+}
+
+.far,
+.fas {
+	color: yellow;
+}
+#submits {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.submitbutton {
+	margin-top: 40px;
+	background: green;
+	color: white;
+	font-size: 24px;
+	border-radius: 10px;
+	width: 240px;
+	height: 80px;
+	margin: 40px 40px auto;
+	text-align: center;
+	opacity: 0;
+}
+
+.submitbutton:hover {
+	color: black;
+	background: lightgreen;
+	font-weight: bold;
+}
+.submitbutton:hover .icon {
+	color: black;
+}
+
+
+footer {
+	/* position: fixed; */
+	width: 100vw;
+	margin-top: 30px;
+	/* bottom: 100px; */
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+footer > * {
+	min-width: 300px;
+	align-self: baseline;
+}
+
+
+
+
+
+footer div {
+	font-size: 17px;
+}
+
+#selector {
+	opacity: 0;
+}
+#selector h2 {
+	text-align: center;
+}
+
+
+.left,
+.right {
+	max-width: 40%;
+}
+.left h2,
+.right h2 {
+	text-align: center;
+}
+/* .left {
+	margin-left: 50px;
+}
+.right {
+	margin-right: 50px;
+} */
