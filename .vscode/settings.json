@@ -3,6 +3,7 @@
         "dataentry",
         "eunit",
         "funit",
+        "nefp",
         "nunit",
         "punit",
         "submitbutton"

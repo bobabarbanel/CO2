@@ -1,12 +1,23 @@
 $(function () {
     ready();
 })
-
+function resizeChosen() {
+    $(".chosen-container").each(function () {
+        $(this).attr('style', 'width: 100%');
+    });
+}
 function ready() {
+    $('body').flowtype({
+        minimum: 500,
+        maximum: 1200,
+        minFont: 12,
+        maxFont: 20,
+        fontRatio: 20
+    });
     const selector = $("#selector");
     const chosen = $(".chosen")
     selector.css("opacity", 0);
-    const submit = $(".submitbutton");
+    const submit = $("#submits");
     submit.css("opacity", 0);
     const schools = processCSV();
     // console.log(schools);
@@ -44,7 +55,7 @@ function ready() {
         chosen.chosen({
             placeholder_text_single: "Choose a School",
             no_results_text: "No matching school(s)",
-            //width: "300px", 
+            width: "800px",
             search_contains: true,
         });
         chosen.empty().append("<option/>");
@@ -54,9 +65,8 @@ function ready() {
                 chosen.append(`<option value="${school.id}"><b>${school.name}</b>&nbsp;&nbsp;&nbsp;&nbsp;${school.address}, ${school.city} ${school.zip} </option>`)
             }
         );
+        resizeChosen();
         chosen.trigger("chosen:updated");
-
-
 
         selector.css("opacity", 1);
     }

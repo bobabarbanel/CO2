@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.css"
     integrity="sha512-0nkKORjFgcyxv3HbE4rzFUlENUMNqic/EzDIeYCgsKa/nwqr2B91Vu/tNAu4Q0cBuG4Xe/D1f/freEci/7GDRA=="
     crossorigin="anonymous" />
-
+  <script src="assets/js/FlowType.js"></script>
   <!-- Schools Info -->
   <script src="schools_csvdata.js"></script>
 </head>
@@ -41,24 +41,26 @@
 
     <div id="selector">
       <h2>Sample</h2>
-      <select class="chosen" style="width: 450px"></select>
+      <select class="chosen"></select>
     </div>
-    
+
     <div id="submits">
-      <button class="submitbutton" target="transport">
-        <i class="icon fas fa-bus"></i><br />Transportation
-      </button>
-      <button class="submitbutton" target="energy">
-        <i class="icon far fa-lightbulb"></i><br />Energy
-      </button>
-      <button class="submitbutton" target="waste">
-        <i class="icon fas fa-dumpster"></i><br />Waste
-      </button>
+      <div>
+        <button class="submitbutton" target="transport">
+          <i class="icon fas fa-bus"></i><br />Transportation
+        </button>
+        <button class="submitbutton" target="energy">
+          <i class="icon far fa-lightbulb"></i><br />Energy
+        </button>
+        <button class="submitbutton" target="waste">
+          <i class="icon fas fa-dumpster"></i><br />Waste
+        </button>
+      </div>
     </div>
 
   </container>
   <footer>
-    <div class="left">
+    <div >
       <h2 id="bottomtextLeft">About the Website:</h2>
       <div>
         This calculator estimates the carbon footprint attributable to each
@@ -67,7 +69,7 @@
         footprint from user inputs using EPA guidelines and sources.
       </div>
     </div>
-    <div class="right">
+    <div >
       <h2 id="bottomtextRight">About the Creator:</h2>
       <div>
         This website was developed by Rishi S. Iyer, a student at
@@ -75,8 +77,8 @@
       </div>
     </div>
   </footer>
-  <script src="wastenums.js"></script>
-  <script src="index.js"></script>
+  <script src="assets/js/wastenums.js"></script>
+  <script src="assets/js/index.js"></script>
 </body>
 
 </html>
