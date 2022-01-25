@@ -1,4 +1,4 @@
-let csvdata = `id,name,type,address,city,zip,CO2
+let schools_csvdata = `id,name,type,address,city,zip,CO2
 1,Arcola,Elementary,1820 Franwall Ave.,Silver Spring,20902,0.758
 2,Ashburton,Elementary,6314 Lone Oak Dr.,Bethesda,20817,0.758
 3,Bannockburn,Elementary,6520 Dalroy Lane,Bethesda,20817,0.758

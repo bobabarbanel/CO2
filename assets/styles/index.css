@@ -39,7 +39,6 @@ form {
 }
 #submits {
 	width: 100%;
-	opacity: 0;
 }
 #submits > div {
 	display: flex;

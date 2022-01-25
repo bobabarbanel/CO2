@@ -1,0 +1,184 @@
+body {
+	background: rgb(95, 146, 223);
+	margin: 10px;
+}
+container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+container label {
+	padding: 10px;
+}
+container input {
+	margin-right: 5px;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+}
+
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 30px;
+	width: 90%;
+	text-align: center;
+}
+nav a {
+	width: 200px;
+	padding: 20px;
+	border: 2px solid black;
+	font-style: bold;
+	text-decoration: none;
+	color: white;
+	border-radius: 20px;
+	text-align: center;
+}
+nav button {
+	height: 30px;
+}
+nav > a {
+	background: green;
+}
+nav > a > span {
+	text-overflow: ellipsis;
+}
+
+.far,
+.fas {
+	color: yellow;
+}
+
+
+
+#schoolinfo {
+	font-weight: bold;
+	color: black;
+	font-size: 30px;
+	padding: 25px;
+	text-align: center;
+	background: tan;
+	margin: 20px;
+}
+
+#dataentry {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: -1em 0 0 0;
+}
+#dataentry > * {
+	/* allows top margin for wrapped items */
+	margin-top: 1em;
+}
+
+.rowLabel {
+	text-align: right;
+	padding-right: 10px;
+	border: 2px solid black;
+	background: wheat;
+	/* width: 180px !important; */
+	border: none;
+	font-weight: bold;
+}
+
+#edata .rowLabel {
+	width: 110px !important;
+}
+.calc {
+	border: 2px solid black;
+	color: white;
+	background: rgba(169, 169, 169, 0.301);
+	font-weight: bold;
+	font-size: 20px;
+}
+.calc > span {
+	margin-left: 5px;
+	width: 80px;
+}
+.bills [type="number"] {
+	margin-left: 20px;
+}
+
+.radioVert {
+	display: flex;
+	flex-direction: column;
+	margin-left: 5px;
+}
+.radioVert > * {
+	min-width: 150px;
+}
+#edata thead th {
+	font-size: 24px;
+	min-width: 50px;
+}
+#edata tbody label {
+	font-size: 18px;
+}
+.bills input {
+	width: 175px;
+}
+#edata [type="number"] {
+	width: 80px;
+}
+
+
+
+#edata {
+	border-collapse: separate;
+	border-spacing: 0 5px;
+}
+
+th {
+	text-align: center;
+}
+
+
+.aboutX {
+	float: right;
+	background: white;
+}
+#dialog {
+	position: absolute;
+	left: 60px;
+	top: 20px;
+	width: 90%;
+	height: 90%;
+	background: lightgrey;
+	display: none;
+	font-style: bold;
+}
+
+#homedialog {
+	display: none;
+	width: 300px;
+	height: 130px;
+	background: white;
+	border: 2px solid black;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+#homedialog p {
+	margin-left: 30px;
+}
+#homedialogbuttons {
+	display: flex;
+	justify-content: space-around;
+}
+.question {
+	font-size: 30px;
+	color: red;
+}
+
+#edata td {
+	padding: 0 5px;
+}

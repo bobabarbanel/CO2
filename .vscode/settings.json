@@ -1,11 +1,24 @@
 {
     "cSpell.ignoreWords": [
+        "Iyer",
+        "MCPS",
+        "Wootton",
+        "csvdata",
         "dataentry",
+        "ebill",
         "eunit",
+        "fbill",
+        "forcalc",
         "funit",
+        "nbill",
         "nefp",
         "nunit",
+        "pbill",
         "punit",
-        "submitbutton"
+        "radiovalue",
+        "schoolinfo",
+        "startover",
+        "submitbutton",
+        "wasteNums"
     ]
 }

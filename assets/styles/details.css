@@ -1,0 +1,111 @@
+body {
+	background: rgb(95, 146, 223);
+	margin: 10px;
+}
+container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#schoolinfo {
+	font-weight: bold;
+	color: black;
+	font-size: 30px;
+	padding: 25px;
+	text-align: center;
+	background: tan;
+	margin: 20px;
+}
+
+
+.rowLabel {
+	text-align: right;
+	padding-right: 10px;
+	border: 2px solid black;
+	background: wheat;
+	/* width: 180px !important; */
+	border: none;
+	font-weight: bold;
+}
+
+#edata .rowLabel {
+	width: 110px !important;
+}
+.calc {
+	border: 2px solid black;
+	color: white;
+	background: rgba(169, 169, 169, 0.301);
+	font-weight: bold;
+	font-size: 20px;
+}
+.calc > span {
+	margin-left: 5px;
+	width: 80px;
+}
+
+#edata thead th,
+#tdata thead th,
+#wdata thead th {
+	font-size: 24px;
+	min-width: 50px;
+}
+
+.dataLabel {
+	background: lightgrey;
+	text-align: center;
+}
+
+
+#wdata td {
+	width: 50px;
+	padding: 4px;
+}
+
+
+#edata,
+#wdata {
+	border-collapse: separate;
+	border-spacing: 0 5px;
+}
+#tdata {
+	border-collapse: separate;
+	border-spacing: 0 25px;
+}
+#wdata td {
+	border: 1px solid rgb(11, 37, 53);
+}
+th {
+	text-align: center;
+}
+
+.report {
+	background: white;
+}
+#wdata div.report {
+	/* width: 100px; */
+	margin-left: 20px;
+}
+#wdata div.empty {
+	background: grey;
+}
+.unit {
+	background: white;
+	font-style: bold;
+}
+.pageHeading {
+	background: rgb(77, 182, 182);
+	text-align: center;
+}
+
+#edata td {
+	padding: 0 5px;
+}
+#wdata td,
+#wdata th {
+	width: 50px !important;
+}
+#wdata th.rowLabel {
+	width: 180px !important;
+}

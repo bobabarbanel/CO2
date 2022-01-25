@@ -1,0 +1,40 @@
+summary {
+	background: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	padding: 15px;
+	margin-left: 50px;
+	width: 270px;
+	max-height: 200px;
+	position: relative;
+}
+/* summary > span {
+	margin: 0 auto;
+} */
+summary > button {
+	margin: 0 auto;
+	width: 150px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%) translateY(-15px);
+}
+summary.final {
+	max-height: 350px;
+	margin: 0 auto;
+}
+summary h3 {
+	text-align: center;
+}
+.annual {
+	background: lightgreen;
+}
+.total {
+	background: lightblue;
+}
+.annual span,
+.total span {
+	margin-left: 30px;
+}
+.report {
+	background: white;
+}

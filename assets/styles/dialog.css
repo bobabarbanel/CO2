@@ -1,0 +1,51 @@
+#dialog {
+	position: absolute;
+	left: 60px;
+	top: 20px;
+	width: 90%;
+	height: 90%;
+	background: lightgrey;
+	display: none;
+	font-style: bold;
+}
+#dialog > div {
+    margin: 10px;
+    width: auto;
+
+    overflow-y:auto;
+}
+#dialog > div > h3, #dialog > div > h4, #dialog > div > ul, #dialog > div > ol {
+    margin: 4px 2px auto;
+}
+#dialog > div > p {
+    margin: 3px;
+}
+#dialog > div > br {
+    font-size: 24%;
+}
+#dialog {
+    font-weight: bold;
+    overflow-y:auto;
+}
+
+.aboutX {
+	float: right;
+	background: white;
+}
+#homedialog {
+	display: none;
+	width: 300px;
+	height: 130px;
+	background: white;
+	border: 2px solid black;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+}
+#homedialog p {
+	margin-left: 30px;
+}
+#homedialogbuttons {
+	display: flex;
+	justify-content: space-around;
+}

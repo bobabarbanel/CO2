@@ -17,23 +17,21 @@ function ready() {
       $(`input[name=${etype + "unit"}]`).prop("checked", false);
     }
     $("#" + etype + "bill").val(+energy[etype + "bill"]);
-    }
-//   calculateEnergy();
-  $(".forcalc").on("change", calculateEnergy);
-  if(school.initialized === false){
-  $("#nbill").trigger("change");
   }
-  $(".report").on("click", () =>{
-    window.open("details.html", "_blank")
-})
-$(".home").on("click", goHome);    
-$("#startover").on("click", startOver);
-$("#cancel").on("click", cancelStartOver);
+  
+  $(".forcalc").on("change", calculateEnergy);
+  if (school.initialized === false) {
+    $("#nbill").trigger("change");
+  }
+  setEvents();
 }
 
+/**
+ * calculateEnergy
+ */
 function calculateEnergy() {
-  let n_value = 0, e_value = 0, f_value = 0, p_value = 0, bill; 
-    
+  let n_value = 0, e_value = 0, f_value = 0, p_value = 0, bill;
+
   //natural gas 
   bill = +$("#nbill").val();
   if (bill !== 0) {
@@ -61,17 +59,17 @@ function calculateEnergy() {
     }
   }
   $("#e_nCO2calc").text(numberWithCommas(n_value));
-energy.nbill = bill;
+  energy.nbill = bill;
 
   //electricity
-    bill = +$("#ebill").val();
+  bill = +$("#ebill").val();
   if (bill !== 0) {
     let checked = $("input[name=eunit]:checked").val();
     // console.log(checked);
     switch (checked) {
       case "e_kwh":
         // Emission per year = Input * pounds per kWh emission factor by zipcode * 12
-        e_value = bill * school.CO2 *12;
+        e_value = bill * school.CO2 * 12;
         energy.eunit = checked;
         break;
       case "e_dollars":
@@ -100,7 +98,7 @@ energy.nbill = bill;
         break;
       case "f_dollars":
         //Emission per year = Input / 3.33 (heating oil price per gallon in Maryland in 2018) * 22.51 * 12
-        f_value = (bill/3.33) * 22.51 * 12;
+        f_value = (bill / 3.33) * 22.51 * 12;
         energy.funit = checked;
         break;
       default:
@@ -124,9 +122,9 @@ energy.nbill = bill;
         break;
       case "p_dollars":
         //Emission per year = Input / 2.90696 (propane price per gallon in Maryland in 2019) * 12.61 * 12
-      p_value = (bill/2.90696) * 12.61 * 12;
-      energy.punit = checked;  
-      break;
+        p_value = (bill / 2.90696) * 12.61 * 12;
+        energy.punit = checked;
+        break;
       default:
         //no radio button chosen
         break;
@@ -147,22 +145,4 @@ energy.nbill = bill;
   school.initialized = false;
   sessionStorage.setItem("target", JSON.stringify(school));
 
-}
-function goHome(){
-  if(school.initialized){
-      startOver();
-  }
-  else{
-      $("#homedialog").show();
-  }
-}
-function startOver(){
-window.location.assign("index.html");
-}
-function cancelStartOver(){
-$("#homedialog").hide();
-}
-function numberWithCommas(x) {
-    x = Math.round(x * 100)/100;
-  return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
 }

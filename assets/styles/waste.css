@@ -381,15 +381,12 @@ th.angle {
 #wdata th.rowLabel {
 	width: 180px !important;
 }
-/* #wdata .wrowLabel {
-  font-size: 10px !important;
-} */
-.energy {
+
+.waste {
 	font-weight: bold;
 	border: dotted;
 	background-color: blue;
 }
-
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
 	/* For landscape layouts only */
 

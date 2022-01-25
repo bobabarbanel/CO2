@@ -6,7 +6,7 @@ function resizeChosen() {
         $(this).attr('style', 'width: 100%');
     });
 }
-function ready() {
+function ready() {  
     $('body').flowtype({
         minimum: 500,
         maximum: 1200,
@@ -17,7 +17,7 @@ function ready() {
     const selector = $("#selector");
     const chosen = $(".chosen")
     selector.css("opacity", 0);
-    const submit = $("#submits");
+    const submit = $(".submitbutton"); // three buttons
     submit.css("opacity", 0);
     const schools = processCSV();
     // console.log(schools);
@@ -29,6 +29,7 @@ function ready() {
         submit.css("opacity", 0);
         // console.log($(this).val());
         const type = $(this).val();
+        
         let prompt;
         if (type === "All") {
             prompt = "a";
@@ -67,11 +68,12 @@ function ready() {
         );
         resizeChosen();
         chosen.trigger("chosen:updated");
-
+        
         selector.css("opacity", 1);
     }
     function handleSelection() {
         const id = +$(this).val();
+
         // console.log(id);
         const school = schools.find(s => s.id === id);
         // add fields for TRANSPORT
@@ -100,17 +102,17 @@ function ready() {
         }
         school.initialized = true;
         sessionStorage.setItem("target", JSON.stringify(school));
-        // window.location.assign("transport.html");
+        
         submit.css("opacity", 1);
 
-        console.log(school);
+        // console.log(school);
     }
     function handleSubmit() {
-        window.location.assign($(this).attr('target') + ".html");
+        window.location.assign(`${$(this).attr('target')}.html`);
     }
 }
 function processCSV() {
-    const rows = csvdata.split(/\n/);
+    const rows = schools_csvdata.split(/\n/);
     const fields = rows.shift().split(/,/);
 
     const schools = [];

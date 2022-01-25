@@ -7,20 +7,12 @@
   <title>Energy</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./style.css">
-  <style>
-    .energy {
-      font-weight: bold;
-      border: dotted;
-      background-color: blue;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/styles/energy.css">
+  <link rel="stylesheet" href="assets/styles/summary.css">
+
+
   <script src="https://kit.fontawesome.com/1824f337f5.js" crossorigin="anonymous"></script>
-  <script>
-    $(function () {
-      $("#summary").load("summary.html");
-    });
-  </script>
+
 </head>
 
 <body>
@@ -44,13 +36,13 @@
         <thead>
           <tr>
             <th></th>
-            <td ></td>
+            <td></td>
             <th>Natural Gas</th>
-            <td ></td>
+            <td></td>
             <th>Electricity</th>
-            <td ></td>
+            <td></td>
             <th>Fuel Oil</th>
-            <td ></td>
+            <td></td>
             <th>Propane</th>
           </tr>
         </thead>
@@ -124,11 +116,31 @@
           </tr>
         </tbody>
       </table>
-      <div id="summary"></div>
+      <summary>
+        <h3>Your Carbon Footprint</h3>
+        <h4 class="annual">Annual CO2 Emissions (lbs.):<br /><span id="annual"></span></h4>
+        <h4 class="total">Your Current Total (lbs.):<br /><span id="current"></span></h4>
+        <button class="report">Display All Data</button>
+      </summary>
     </div>
   </container>
-  <script src="energy.js"></script>
-  <script src="about.js"></script>
+  <div id="dialog">
+    <button class="aboutX">X</button>
+    <pre></pre>
+  </div>
+  <div id="homedialog">
+    <p>Are you sure you want to start over?</p>
+    <p>All of your data will be lost.</p>
+    <div id="homedialogbuttons">
+      <button id="startover">Start Over</button>
+      <i class="fas fa-question-circle question"></i>
+      <button id="cancel">Cancel</button>
+    </div>
+  </div>
+
+  <script src="assets/js/energy.js"></script>
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/about.js"></script>
 </body>
 
 </html>
